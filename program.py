@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 import math
 
-image = Image.open("minerva_ieee.png")
+image = Image.open("input_image.jpg")
 # scale factor between 0.1 - 1
 scale_fac = 0.8
 char_width = 10
@@ -31,4 +31,4 @@ for i in range(h):
         pixels[j, i] = (grey, grey, grey)
         draw.text((j * char_width, i * char_height), get_some_char(grey), font=font, fill=(r, g, b))
 
-output_image.save("image.png")
+output_image.save("output_image.png")
